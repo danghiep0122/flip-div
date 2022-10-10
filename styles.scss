@@ -1,0 +1,63 @@
+div.container {
+    margin-top: 90px;
+    width: 500px;
+    height: 500px;
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.flip {
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    height: 400px;
+    background-color: gray;
+    transition: all ease;
+}
+
+div.flip.logIn {
+    animation: flipRight .4s ease-in-out;
+}
+
+div.flip.signIn {
+    animation: flipLeft .4s ease-in-out;
+}
+
+h1 {
+    margin: 8px;
+
+}
+
+h1.signIn {
+    color: red;
+}
+
+h1.logIn {
+    color: red;
+}
+
+@keyframes flipRight {
+    0% {
+    transform: rotateX(0);
+    }
+    50% {
+        transform: rotateX(180deg);
+    }
+    100% {
+        transform: rotateX(0);
+    }
+}
+
+@keyframes flipLeft {
+    0% {
+    transform: rotateZ(0);
+    }
+    50% {
+        transform: rotateZ(-180deg);
+    }
+    100% {
+        transform: rotateZ(0);
+    }
+}
