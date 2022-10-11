@@ -1,0 +1,126 @@
+div.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    transition: all ease-out 1s;
+
+}
+
+.active-modal{
+    height: 200px;
+    width: 300px;
+}
+
+.Modal-wrapper {
+    z-index: 20;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.modal {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: #333;
+    opacity: .9;
+    z-index: 20;
+
+}
+
+.input-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    background-color: #555;
+    animation: slide-ttb .6s ease-in-out;
+    z-index: 21;
+}
+
+@keyframes slide-ttb {
+    from {
+        opacity: .1;
+        transform: translate(-50% , -90%)
+    }
+    to {
+        transform: translate(-50% , -50%)
+    }
+}
+
+.offModalBtn {
+    position: fixed;
+    top: 24%;
+    left: 65%;
+    background-color: transparent;
+    z-index: 22;
+}
+
+div.container {
+    margin-top: 90px;
+    width: 500px;
+    height: 500px;
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.flip {
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    height: 400px;
+    background-color: gray;
+    transition: all ease;
+}
+
+div.flip.logIn {
+    animation: flipRight .4s ease-in-out;
+}
+
+div.flip.signIn {
+    animation: flipLeft .4s ease-in-out;
+}
+
+h1 {
+    margin: 8px;
+
+}
+
+h1.signIn {
+    color: red;
+}
+
+h1.logIn {
+    color: red;
+}
+
+@keyframes flipRight {
+    0% {
+    transform: rotateY(0);
+    }
+    50% {
+        transform: rotateY(180deg);
+    }
+    100% {
+        transform: rotateY(0);
+    }
+}
+
+@keyframes flipLeft {
+    0% {
+    transform: rotateY(0);
+    }
+    50% {
+        transform: rotateY(-180deg);
+    }
+    100% {
+        transform: rotateY(0);
+    }
+}
